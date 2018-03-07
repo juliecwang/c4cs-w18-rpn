@@ -21,7 +21,7 @@ def calculate(arg):
 			function = operators[token]	
 			arg1 = stack.pop()
 			arg2 = stack.pop()
-			return function(arg1, arg2)
+			result =  function(arg1, arg2)
 			stack.append(result)
 		print(stack)
 	if len(stack) != 1:
