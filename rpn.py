@@ -12,21 +12,21 @@ operators = {
 }
 
 def calculate(arg):
-    stack = list()
-    for token in arg.split():
-        try:
-            value = int(token)
-            stack.append(value)
-        except ValueError:
-	    function = operators[token]	
-            arg1 = stack.pop()
-            arg2 = stack.pop()
-            return function(arg1, arg2)
-	    stack.append(result)
-	print(stack)
-    if len(stack) != 1:
-	raise TypeError("Too many parameters")
-    return stack.pop()
+	stack = list()
+	for token in arg.split():
+		try:
+			value = int(token)
+			stack.append(value)
+		except ValueError:
+			function = operators[token]	
+			arg1 = stack.pop()
+			arg2 = stack.pop()
+			return function(arg1, arg2)
+			stack.append(result)
+		print(stack)
+	if len(stack) != 1:
+		raise TypeError("Too many parameters")
+	return stack.pop()
 
 def main():
 	while True:
@@ -35,6 +35,6 @@ def main():
 
 
 if __name__ == '__main__':
-     main()
+	main()
 
 
